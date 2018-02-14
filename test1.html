@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--CSS就近原则-->
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <style>
+        /*标签选择器*/
+        div{
+            color: aqua;
+        }
+        p{
+            color: red;
+        }
+        h1{
+
+         }
+
+        /* 类选择器 */
+        .divStyle1{
+            color: pink;
+        }
+
+        /* id选择器 */
+        #style007{
+            color: darkblue;
+        }
+
+        /* 并列选择器 或的关系 */
+        h2, .divStyle1 {
+            color: purple;
+        }
+
+        /* 符合选择器 且的关系 */
+        p#style008{
+            background-color: gold;
+        }
+
+        /* 后台选择器，一个标签或类class或id 包含另一个标签 */
+        div a{
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is a test</h1>
+    <h2> text </h2>
+
+    <div class="divStyle1">我是容器</div>
+    <div id="style007">我是容器</div>
+    <div>我是容器</div>
+    <p id="style008" >它是段落</p>
+    <p>它是段落</p>
+    <p>它是段落</p>
+
+    <div>
+        div
+        <a href="#">超链接</a>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--允许翻译？-->
+<!--<html lang="en">-->
+<html>
+<!-- 挪动代码块快捷键：shift+command+up/down -->
+<head>
+    <meta charset="UTF-8">
+    <title>测试CSS优先级</title>
+
+    <style>
+        /*
+         CSS样式遵守的规则
+         1。相同类型的选择器遵守：a就近原则 b叠加原则
+         2。不同类型的选择器遵守
+           id选择器 > 类选择器 > 标签选择器
+
+        */
+        /*
+         通配符 *
+         1。优先级比较低
+         2。性能较差
+        */
+        *{
+            font-size: 16px;
+            /*color: darkred!important;!*!important强制执行，不管优先级*!*/
+        }
+
+        /*标签选择器*/
+        div{
+            color: red;
+        }
+        /*类选择器*/
+        .class1{
+            border: 2px double black;
+            /*将控件隐藏*/
+            visibility: hidden;
+        }
+        .class2 {
+            color: aqua;
+        }
+        /* id选择器 */
+        #id1{
+            color: bisque;
+        }
+
+        /* 符合选择器 */
+        div.class1{
+            color: black;
+        }
+        /* id本来就唯一，不用加前边的标签了 */
+        div#id1{
+            color: rebeccapurple;
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <h3> 测试优先级 </h3>
+    <div>
+        哥们来了
+        <div id="id1" class="class1 class2">
+            哥们来了
+        </div>
+        <div class="class1 class2" color="red">
+            哥们来了
+        </div>
+    </div>
+</body>
+</html>

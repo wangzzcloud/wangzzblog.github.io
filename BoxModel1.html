@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>学习盒子模型</title>
+
+    <style>
+        *{
+            /*外边界*/
+            margin: 0;
+            /*内边界*/
+            padding: 0;
+        }
+
+        div{
+            /*设置盒子阴影 水平方向h-shadow 竖直方向v-shadow 模糊距离blur 颜色*/
+            box-shadow: 10px 5px 10px purple;
+        }
+
+        .bClass{
+            width: 50%;
+            height: 500px;
+            background-color: antiquewhite;
+            border: 5px solid green;
+            /*设置内边距*/
+            padding: 50px 10px 50Px 10px;
+            /*设置外边界*/
+            margin: 20px;
+        }
+        .bClass2{
+            height: 100px;
+            width: 500px;
+            background-color: pink;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 10px 5px 10px purple;
+            border-top-right-radius: 200px;
+            /*border-top-left-radius: 100px;*/
+            border-bottom-left-radius: 100px;
+        }
+
+        .bImgClass{
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            /*color: lightgray;*/
+            /*
+            设置盒子阴影 水平方向h-shadow 竖直方向v-shadow
+            可选：
+            模糊距离blur 阴影尺寸spread 颜色color 内部阴影insert
+            */
+            box-shadow: 10px 5px 10px lightgray;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!--虚拟DOM-->
+        <div class="bClass"> 哥们来了哥们来了哥们来了哥们来了哥们来了哥们来了哥们来了哥们来了哥们来了
+            哥们来了哥们来了哥们来了哥们来了哥们来了哥们来了哥们来了哥们来了哥们来了
+
+            <!--<p>哥们来了哥们来了哥们来了哥们来了哥们来了哥们来了</p>-->
+            <!--<p>哥们来了哥们来了哥们来了哥们来了哥们来了哥们来了</p>-->
+            <!--<p>哥们来了哥们来了哥们来了哥们来了哥们来了哥们来了</p>-->
+
+        </div>
+        <div>
+            <div class="bClass2">哈哈阿哈哈哈哈哈哈</div>
+            <img src="source/image/IMG_0601.jpg" alt="测试" class="bImgClass">
+        </div>
+    </div>
+
+</body>
+</html>

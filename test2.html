@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS选择器</title>
+
+    <style>
+        /*后代选择器*/
+        /*div p{*/
+            /*background-color: yellow;*/
+        /*}*/
+        /*直接后代选择器*/
+        div>p{
+            background-color: red;
+        }
+
+        /* 相邻同级选择器 */
+        div + p{
+            color: purple;
+        }
+
+        /* 属性选择器 */
+        p[name]{
+            color: red;
+        }
+        p[name][age]{
+            background-color: blue;
+        }
+        p[name="jeray"]{
+            border: 2px double lightgreen;
+        }
+
+        /* 伪类1 */
+        input:focus {
+            outline: none;
+            width: 188px;
+        }
+        /*伪类2*/
+        /* 当鼠标移动到某个试图上的时候，该试图的变化，在网页端可能会用到 */
+        #main:hover{
+            width: 300px;
+            height: 200px;
+            background-color: chartreuse;
+        }
+
+        /* 伪元素，通常对文本操作 */
+        /* 在某标签前添加内容，如图片等 */
+        p[name="tom"]:before {
+            content: url("source/image/IMG_0646.jpg");
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <p> 测试相邻同级选择器，目标变紫 </p>
+    <div>
+        <p>div里的段落</p>
+        <span>
+            <p>div里的span里的p</p>
+        </span>
+    </div>
+    <p> 测试相邻同级选择器，目标变紫 </p>
+
+    <hr>
+    <h1>测试内容选择器</h1>
+    <p name="tom"> 测试相邻同级选择器，目标变紫 </p>
+    <div>
+        <p name="jeray" age="20">div里的段落</p>
+        <span>
+            <p>div里的span里的p</p>
+        </span>
+    </div>
+    <p> 测试相邻同级选择器，目标变紫 </p>
+
+    <hr>
+    <h3> 伪类 </h3>
+    <div>
+        <input placeholder="输入点什么...">
+    </div>
+
+    <div id="main">
+        <p name="jeray" age="20">div里的段落</p>
+        <span>
+            <p>div里的span里的p</p>
+        </span>
+    </div>
+</body>
+</html>
